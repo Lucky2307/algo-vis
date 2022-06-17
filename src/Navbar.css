@@ -1,0 +1,56 @@
+@import url("./colors.css");
+@import url("./fonts/fonts.css");
+
+.nav {
+    background-color: var(--primary-dark);
+    display: flex;
+    justify-content: center;
+}
+
+.nav > * {
+    flex: 3;
+}
+
+.navTitle {
+    text-decoration: none;
+    font-family: montserrat-extrabold;
+    font-size: calc(.8rem + 1.2vw);
+    padding: 1rem;
+    color: white;
+}
+
+.runBtn {
+    flex: 1;
+    align-self: center;
+    color: white;
+    font-family: montserrat-extrabold;
+    background-color: var(--purple-primary);
+    border-radius: .5rem;
+    border-width: 0;
+    padding: 1rem;
+    margin: .5rem 0 .5rem 0;
+    cursor: pointer;
+    transition: background-color .1s, padding .5s;
+}
+.runBtn:hover {
+    background-color: var(--purple-hover);
+}
+.runBtn:active {
+    background-color: var(--purple-active);
+}
+
+.dropdownContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dropdownBtn {
+    font-family: montserrat-extrabold;
+    font-size: calc(.65rem + .5vw);
+    align-self: center;
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
