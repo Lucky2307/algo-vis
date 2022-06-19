@@ -6,3 +6,7 @@
     font-family: Montserrat-SemiBold;
     src: url('./Montserrat-SemiBold.ttf');
 }
+@font-face {
+    font-family: Roboto;
+    src: url('./RobotoMono-Regular.ttf');
+}

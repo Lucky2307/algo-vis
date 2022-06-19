@@ -1,4 +1,73 @@
 @import url('./fonts/fonts.css');
+
 body {
   font-family: montserrat-semibold;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .options {
+    min-height: 100px;
+  }
+}
+
+.screen {
+  flex: 3;
+}
+
+.options {
+  border-left: solid var(--primary-dark) .25rem;
+  background-color: var(--light-2);
+  padding: 1rem;
+  flex: 1;
+}
+
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.optionLabel {
+  padding: 1rem 0 .5rem 0;
+}
+
+.dataInput {
+  font-family: roboto;
+  resize: none;
+  border: solid var(--primary-dark) .15rem;
+}
+
+.runBtn {
+  flex: 1;
+  align-self: stretch;
+  color: white;
+  font-family: montserrat-extrabold;
+  background-color: var(--purple-primary);
+  border-radius: .5rem;
+  border-width: 0;
+  padding: 1rem;
+  margin: .5rem 0 .5rem 0;
+  cursor: pointer;
+  transition: background-color .1s, padding .5s;
+}
+
+.runBtn:hover {
+  background-color: var(--purple-hover);
+}
+
+.runBtn:active {
+  background-color: var(--purple-active);
 }

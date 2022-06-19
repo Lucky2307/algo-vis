@@ -1,6 +1,8 @@
 :root{
     --primary-dark: #333;
     --secondary-dark: #494e52;
+    --light: #fafafa;
+    --light-2: #f0f0f0;
     --purple-primary: #575BC2;
     --purple-hover: #7175d9;
     --purple-active: #6B6DC2;

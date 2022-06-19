@@ -25,25 +25,6 @@ ul {
     color: white;
 }
 
-.runBtn {
-    flex: 1;
-    align-self: center;
-    color: white;
-    font-family: montserrat-extrabold;
-    background-color: var(--purple-primary);
-    border-radius: .5rem;
-    border-width: 0;
-    padding: 1rem;
-    margin: .5rem 0 .5rem 0;
-    cursor: pointer;
-    transition: background-color .1s, padding .5s;
-}
-.runBtn:hover {
-    background-color: var(--purple-hover);
-}
-.runBtn:active {
-    background-color: var(--purple-active);
-}
 
 .dropdownContainer {
     position: relative;
@@ -84,7 +65,7 @@ ul {
         opacity: 0;
     }
     to {
-        height: 50px;
+        height: 55px;
         opacity: 100%;
     }
 }
@@ -97,7 +78,8 @@ ul {
 }
 
 .dropdownItem {
-    animation: .5s ease appear;
+    animation: .3s ease appear;
+    height: 55px;
     display: flex;
     justify-content: center;
 }

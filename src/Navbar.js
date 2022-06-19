@@ -68,7 +68,6 @@ class Dropdown extends React.Component {
 function Navbar() {
     return <nav className="nav">
         <a href="/" className="navTitle">Algorithm Visualization</a>
-        <button className='runBtn'>Run!</button>
         <Dropdown>
             <DropdownItem algoPath="/reverselinkedlist">Reverse Linked List</DropdownItem>
             <DropdownItem algoPath="/test">Test</DropdownItem>
