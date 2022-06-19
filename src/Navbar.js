@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 function DropdownItem(props) {
     return (
         <li className='dropdownItem'>
-            <button className='dropdownBtn dropdownItemBtn' onClick={() => {
-                props.setSelected(props.children);
+            <a href={props.algoPath} className='dropdownBtn dropdownItemBtn' onClick={() => {
                 props.setOpen(false);
                 console.log(props.algoId);
-            }}>{props.children}</button>
+            }}>{props.children}</a>
         </li>
     )
 }
@@ -19,15 +18,20 @@ class Dropdown extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selected: 'Reverse Linked List',
+            algoPath: window.location.pathname,
             open: false,
         }
     }
-    setSelected(name) {
-        this.setState({ selected: name })
-    }
     setOpen(b) {
         this.setState({ open: b })
+    }
+
+    getName(path) {
+        let algoTable = {
+            reverselinkedlist: 'Reverse Linked List',
+            test: 'Test',
+        }
+        return algoTable[path.replace('/', '')]
     }
 
     render() {
@@ -44,14 +48,13 @@ class Dropdown extends React.Component {
                 <button
                     className='dropdownBtn'
                     onClick={() => this.setOpen(true)}
-                    setSelected={(name) => this.setSelected(name)}
-                >{this.state.selected}<FontAwesomeIcon className='dropdownIcon' icon={faCaretDown} /></button>
+                >{this.getName(this.state.algoPath)}<FontAwesomeIcon className='dropdownIcon' icon={faCaretDown} /></button>
                 {this.state.open ?
                     <div className='dropdownMenu'>
                         <ul>
                             {// Add setSelected function to each children props
                                 React.Children.map(this.props.children, child => {
-                                    return React.cloneElement(child, { setSelected: (name) => this.setSelected(name), setOpen: (b) => this.setOpen(b) })
+                                    return React.cloneElement(child, { setOpen: (b) => this.setOpen(b) })
                                 })}
                         </ul>
                     </div>
@@ -67,9 +70,8 @@ function Navbar() {
         <a href="/" className="navTitle">Algorithm Visualization</a>
         <button className='runBtn'>Run!</button>
         <Dropdown>
-            <DropdownItem algoId="reverselink">Rev</DropdownItem>
-            <DropdownItem algoId="tree">Treeeeeeeeeeeee</DropdownItem>
-            <DropdownItem algoId="tree">Treeeeeeeeeeeee</DropdownItem>
+            <DropdownItem algoPath="/reverselinkedlist">Reverse Linked List</DropdownItem>
+            <DropdownItem algoPath="/test">Test</DropdownItem>
         </Dropdown>
     </nav>
 }

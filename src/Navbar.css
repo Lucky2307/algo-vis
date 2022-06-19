@@ -103,6 +103,7 @@ ul {
 }
 
 .dropdownItemBtn {
+    text-decoration: none;
     margin: 0;
     flex-grow: 1;
 }
