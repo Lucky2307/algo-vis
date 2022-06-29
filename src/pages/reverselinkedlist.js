@@ -1,3 +1,5 @@
+import Node from "../particles/Node";
+
 export default function ReverseLinkedList(){
-    return <h1>Reverse Linked List</h1>
+    return <Node></Node> 
 }

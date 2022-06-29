@@ -14,22 +14,15 @@ body {
   display: flex;
 }
 
-@media only screen and (max-width: 768px) {
-  .content {
-    flex-direction: column;
-  }
-
-  .options {
-    min-height: 100px;
-  }
-}
 
 .screen {
-  flex: 3;
+  flex: 2;
 }
 
 .options {
-  border-left: solid var(--primary-dark) .25rem;
+  border-width: 0 0 0 .25rem;
+  border-style: solid;
+  border-color: var(--primary-dark);
   background-color: var(--light-2);
   padding: 1rem;
   flex: 1;
@@ -40,10 +33,40 @@ body {
   flex-direction: column;
 }
 
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  padding: 0;
+}
+
 .optionLabel {
   padding: 1rem 0 .5rem 0;
 }
 
+@media only screen and (max-width: 1920px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .options {
+    border-width: .25rem 0 0 0;
+    min-height: 100px;
+  }
+
+  .inputContainer {
+    flex: 1;
+    padding-right: 1rem;
+  }
+
+  .optionsContainer {
+    flex-direction: row;
+  }
+
+  .optionLabel {
+    padding: 0;
+  }
+}
 .dataInput {
   font-family: roboto;
   resize: none;
@@ -70,4 +93,15 @@ body {
 
 .runBtn:active {
   background-color: var(--purple-active);
+}
+
+.algoContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.algoArea {
+  flex: 1;
+  resize: none;
 }

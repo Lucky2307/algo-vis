@@ -33,10 +33,15 @@ function App() {
         </div>
         <div className='options'>
           <div className='optionsContainer'>
-            <div className='optionLabel'>Input:</div>
-            <textarea className='dataInput' placeholder={defaultData} rows="4" ></textarea>
-            <button className='runBtn'>Run!</button>
-            <div className='optionLabel'>Algorithm:</div>
+            <div className='inputContainer'>
+              <div className='optionLabel'>Input:</div>
+              <textarea className='dataInput' placeholder={defaultData} rows="4" ></textarea>
+              <button className='runBtn'>Run!</button>
+            </div>
+            <div className='algoContainer'>
+              <div className='optionLabel'>Algorithm:</div>
+              <textarea className='algoArea'></textarea>
+            </div>
           </div>
         </div>
       </div>
